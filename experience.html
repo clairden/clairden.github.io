@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <header class="navbar-container">
@@ -28,9 +31,50 @@
         </nav>
     </header>
 <body>
-    <p>Professional Experience</p>
-    <ul>
-        <li>Studying at USI</li>
-    </ul>
+    <div class="bg-geo"></div>
+
+    <div class="page-wrapper">
+
+        <!-- Education / Experience -->
+        <div class="about-card">
+            <h2>Experience</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>University of Southern Indiana</h3>
+                        <p class="timeline-meta">B.S. Computer Science &nbsp;·&nbsp; 2024 – 2028 (expected)</p>
+                        <p>Second-year student building a foundation in software development, data structures, and systems programming.</p>
+                    </div>
+                </div>
+
+                <!-- Add more timeline items here -->
+                <!-- Example:
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Job Title – Company Name</h3>
+                        <p class="timeline-meta">Jan 2025 – Present</p>
+                        <p>Description of what you did.</p>
+                    </div>
+                </div>
+                -->
+
+            </div>
+        </div>
+
+        <!-- Resume download -->
+        <div class="about-card">
+            <h2>Resume</h2>
+            <p style="margin-bottom: 20px;">Download a copy of my resume to learn more about my background and skills.</p>
+            <a href="files/Aiden LeClaire Resume.pdf" download class="resume-btn">
+                ⬇ Download Resume (PDF)
+            </a>
+        </div>
+
+        <a href="index.html" class="back-link">← Return to Main Page</a>
+
+    </div>
 </body>
 </html>

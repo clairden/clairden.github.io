@@ -260,15 +260,193 @@ a:hover {
     transform: scale(1.03);
     transition: all 0.2s ease-in-out;
 }
-#email {
-    text-align: center;
-    margin-top: 20px;
-    font-weight: bold;
-    color: #F5F6FA;
+
+.about-wrapper {
+    max-width: 720px;
+    margin: 60px auto 100px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
-#linkedin {
+
+.about-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 36px 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    animation: fadeUp 0.5s ease both;
+    margin-bottom: 50px;
+}
+
+    .about-card:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    .about-card:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    .about-card:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-card h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #00ff88;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.about-card p {
+    text-align: left;
+    line-height: 1.85;
+    color: #DBE4EE;
+    font-size: 0.97rem;
+}
+
+/* Tag pills for skills */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-start;
+}
+
+    .tag-list li {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: White;
+        padding: 6px 16px;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: background 0.2s, transform 0.15s;
+    }
+
+        .tag-list li:hover {
+            background: rgba(0, 255, 136, 0.18);
+            transform: translateY(-2px);
+        }
+
+/* Hobby grid */
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 14px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .hobby-grid li {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 18px 12px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #DBE4EE;
+        transition: background 0.2s, transform 0.15s;
+    }
+
+        .hobby-grid li:hover {
+            background: rgba(0, 255, 136, 0.18);
+            transform: translateY(-3px);
+        }
+
+.hobby-icon {
+    display: block;
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+}
+.hobby-preview {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 14px;
+    backdrop-filter: blur(10px);
+}
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #DBE4EE;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.15s, border-color 0.2s;
+}
+
+    .contact-link:hover {
+        background: rgba(0, 255, 136, 0.07);
+        border-color: rgba(0, 255, 136, 0.3);
+        transform: translateY(-2px);
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .contact-link img {
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+.contact-link-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.contact-label {
+    display: flex;
+    flex-direction: column;
+}
+
+    .contact-label span {
+        font-size: 0.78rem;
+        color: #8b90a7;
+        font-weight: 400;
+    }
+
+
+
+footer {
     text-align: center;
-    margin-top: 20px;
-    font-weight: bold;
-    color: #F5F6FA;
+    padding: 20px;
+    color: #8b90a7;
+    font-size: 0.82rem;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    margin-top: 40px;
 }

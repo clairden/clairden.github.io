@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <header class="navbar-container">
@@ -28,18 +31,33 @@
         </nav>
     </header>
 <body>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! Here I will catalog my projects and update the site as I become more profficient in my development skills</p>
-        <p>My name is Aiden LeClaire and I am a second year computer science student at the University of Southern Indiana. I am constantly working to improve my skills and become a better developer so come back often to see the progress with the website.</p>
-    </section>
+    <div class="about-card">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! Here I will catalog my projects and update the site as I become more profficient in my development skills</p>
+            <p>My name is Aiden LeClaire and I am a second year computer science student at the University of Southern Indiana. I am constantly working to improve my skills and become a better developer so come back often to see the progress with the website.</p>
+        </section>
+    </div>
 
-    <div>
+    <div class="about-card">
         <h2>My Skills</h2>
-        <ul>
+        <ul class="tag-list">
             <li>Python</li>
             <li>C#</li>
             <li>HTML/CSS/JavaScript</li>
+            <li>SQL</li>
+            <li>Blazor</li>
+            <li>ASP.NET Core API</li>
+        </ul>
+    </div>
+
+    <div class="about-card">
+        <h2>My Hobbies</h2>
+        <ul class="hobby-grid">
+            <li data-img="images/RockClimbing.jpg">Rock Climbing</li>
+            <li data-img="images/Golf.png">Golf</li>
+            <li data-img="images/Soccer.png">Soccer</li>
+            <li data-img="images/Motorcycle.png">Motorcycles</li>
         </ul>
     </div>
 
@@ -49,5 +67,30 @@
     <footer>
         <p>&copy; 2025 Aiden LeClaire</p>
     </footer>
+    <script>
+        const preview = document.createElement('div');
+        preview.className = 'hobby-preview';
+        preview.innerHTML = '<img id="preview-img" src="" style="width:30%; border-radius:8px; object-fit:cover; max-height:600px; display:block; margin:0 auto; ">';
+        preview.style.display = 'none';
+
+        const grid = document.querySelector('.hobby-grid');
+        grid.insertAdjacentElement('afterend', preview);
+
+        document.querySelectorAll('.hobby-grid li').forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.dataset.img;
+                const previewImg = document.getElementById('preview-img');
+
+                // If clicking the same card, toggle it closed
+                if (previewImg.src.endsWith(img) && preview.style.display === 'block') {
+                    preview.style.display = 'none';
+                    return;
+                }
+
+                previewImg.src = img;
+                preview.style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>
